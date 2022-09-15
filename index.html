@@ -28,7 +28,43 @@
     </table>
     <!-----------------Resposta do Exercício 1------------>
 
-       
+    <script>
+      const valor = document.getElementById("t1").lastChild
+
+      const linha1 = valor.childNodes[1].childNodes[1]
+      const linha2 = valor.childNodes[3].childNodes[1]
+      const linha3 = valor.childNodes[5].childNodes[1]
+      
+      const conteudo1 = (Math.random() * 10).toFixed(2)
+      const conteudo2 = (Math.random() * 10).toFixed(2)
+      const conteudo3 = (Math.random() * 10).toFixed(2)
+
+      if(conteudo1 > conteudo2 && conteudo1 > conteudo3){
+        linha3.textContent = conteudo1
+      } if(conteudo1 < conteudo2 && conteudo1 > conteudo3 || conteudo1 > conteudo2 & conteudo1 < conteudo3){
+        linha2.textContent = conteudo1
+      } if(conteudo1 < conteudo2 && conteudo1 < conteudo3){
+        linha1.textContent = conteudo1
+      }
+
+      if(conteudo2 > conteudo1 && conteudo2 > conteudo3){
+        linha3.textContent = conteudo2
+      } if(conteudo2 < conteudo1 && conteudo2 > conteudo3 || conteudo2 > conteudo1 & conteudo2 < conteudo3){
+        linha2.textContent = conteudo2
+      } if(conteudo2 < conteudo1 && conteudo2 < conteudo3){
+        linha1.textContent = conteudo2
+      }
+
+      if(conteudo3 > conteudo2 && conteudo3 > conteudo1){
+        linha3.textContent = conteudo3
+      } if(conteudo3 < conteudo2 && conteudo3 > conteudo1 || conteudo3 > conteudo2 & conteudo3 < conteudo1){
+        linha2.textContent = conteudo3
+      } if(conteudo3 < conteudo2 && conteudo3 < conteudo1){
+        linha1.textContent = conteudo3
+      }
+      
+    </script>
+      
     <!---------------------------------------------------->
     <h2>2 Cores</h2>
     <p>
@@ -36,10 +72,20 @@
       dentro da lista abaixo, deve-se, também, criar um gradiente linear de
       branco até esta cor como cor de fundo do li.
     </p>
-    <ul id="lista-cores" style="list-style: none; padding: 0"></ul>
+    <ul id="lista-cores" style="list-style: none; padding: 0">
+      
+    </ul>
 
     <!-----------------Resposta do Exercício 2------------>
 
+    <script>
+      const cor = document.getElementById("lista-cores")
+      const vermelho = ((Math.random() * 200).toFixed(0))
+      const verde = ((Math.random() * 200).toFixed(0))
+      const azul = ((Math.random() * 200).toFixed(0))
+
+      cor.innerHTML = `<li style = 'background-image: linear-gradient(to right, rgba(${vermelho}, ${verde}, ${azul}, 1), red);'>rgb(${vermelho}, ${verde}, ${azul})</li>`
+    </script>
     
     <!---------------------------------------------------->
 
@@ -110,6 +156,15 @@
 
     <!-----------------Resposta do Exercício 3------------>
 
+    <script>
+      const tabela = document.getElementById("t2").lastChild
+    
+      for(let i = 0; tabela.childNodes[i]; i++){
+        console.log(i)
+      }
+
+      console.log(tabela)
+    </script>
 
     <!---------------------------------------------------->
 
